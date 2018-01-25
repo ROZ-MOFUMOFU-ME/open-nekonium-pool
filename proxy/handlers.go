@@ -5,8 +5,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/ROZ-MOFUMOFU-ME/nukohash"
-	"github.com/nekonium/go-nekonium/common"
+	"github.com/ROZ-MOFUMOFU-ME/open-nekonium-pool/rpc"
+	"github.com/ROZ-MOFUMOFU-ME/open-nekonium-pool/util"
 )
 
 // Allow only lowercase hexadecimal with 0x prefix

@@ -241,7 +241,7 @@ otherwise you will get errors on start because of JSON comments.**
   "unlocker": {
     "enabled": false,
     // Pool fee percentage
-    "poolFee": 0.5,
+    "poolFee": 1.0,
     // Pool fees beneficiary address (leave it blank to disable fee withdrawals)
     "poolFeeAddress": "",
     // Donate 10% from pool fees to developers
@@ -266,7 +266,7 @@ otherwise you will get errors on start because of JSON comments.**
     // Require minimum number of peers on node
     "requirePeers": 5,
     // Run payouts in this interval
-    "interval": "12h",
+    "interval": "120m",
     // Gnekonium instance node rpc endpoint for payouts processing
     "daemon": "http://127.0.0.1:8293",
     // Rise error if can't reach gnekonium in this amount of time

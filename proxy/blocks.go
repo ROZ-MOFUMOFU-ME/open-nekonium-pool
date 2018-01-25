@@ -7,10 +7,10 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/nekonium/go-nekonium/common"
 
-	"github.com/sammy007/open-ethereum-pool/rpc"
-	"github.com/sammy007/open-ethereum-pool/util"
+	"github.com/ROZ-MOFUMOFU-ME/open-nekonium-pool/rpc"
+	"github.com/ROZ-MOFUMOFU-ME/open-nekonium-pool/util"
 )
 
 const maxBacklog = 3

@@ -8,11 +8,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common/math"
+	"github.com/nekonium/go-nekonium/common/math"
 
-	"github.com/sammy007/open-ethereum-pool/rpc"
-	"github.com/sammy007/open-ethereum-pool/storage"
-	"github.com/sammy007/open-ethereum-pool/util"
+	"github.com/ROZ-MOFUMOFU-ME/open-nekonium-pool/rpc"
+	"github.com/ROZ-MOFUMOFU-ME/open-nekonium-pool/storage"
+	"github.com/ROZ-MOFUMOFU-ME/open-nekonium-pool/util"
 )
 
 type UnlockerConfig struct {
@@ -36,7 +36,7 @@ var byzantiumReward = math.MustParseBig256("3000000000000000000")
 
 // Donate 10% from pool fees to developers
 const donationFee = 10.0
-const donationAccount = "0xb85150eb365e7df0941f0cf08235f987ba91506a"
+const donationAccount = "0xA79BdE46faab3c40632604728E9F2165b052581C"
 
 type BlockUnlocker struct {
 	config   *UnlockerConfig

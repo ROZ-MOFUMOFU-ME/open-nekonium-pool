@@ -25,7 +25,7 @@
 Dependencies:
 
   * go >= 1.9
-  * gnekonium
+  * gnekonium or parity-nekonium
   * redis-server >= 2.8.0
   * nodejs >= 4 LTS
   * nginx

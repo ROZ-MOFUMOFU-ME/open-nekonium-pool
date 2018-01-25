@@ -1,12 +1,12 @@
-## Open Source Ethereum Mining Pool
+## Open Source Nekonium Mining Pool
 
 ![Miner's stats page](https://user-images.githubusercontent.com/7374093/31591180-43c72364-b236-11e7-8d47-726cd66b876a.png)
 
-[![Join the chat at https://gitter.im/sammy007/open-ethereum-pool](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/sammy007/open-ethereum-pool?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://travis-ci.org/sammy007/open-ethereum-pool.svg?branch=develop)](https://travis-ci.org/sammy007/open-ethereum-pool) [![Go Report Card](https://goreportcard.com/badge/github.com/sammy007/open-ethereum-pool)](https://goreportcard.com/report/github.com/sammy007/open-ethereum-pool)
+[![Join the chat at https://github.com/ROZ-MOFUMOFU-ME/open-nekonium-pool/](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ROZ-MOFUMOFU-ME/open-nekonium-pool?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://travis-ci.org/ROZ-MOFUMOFU-ME/open-nekonium-pool.svg?branch=develop)](https://travis-ci.org/ROZ-MOFUMOFU-ME/open-nekonium-pool) [![Go Report Card](https://goreportcard.com/badge/github.com/ROZ-MOFUMOFU-ME/open-nekonium-pool)](https://goreportcard.com/report/github.com/ROZ-MOFUMOFU-ME/open-nekonium-pool)
 
 ### Features
 
-**This pool is being further developed to provide an easy to use pool for Ethereum miners. This software is functional however an optimised release of the pool is expected soon. Testing and bug submissions are welcome!**
+**This pool is being further developed to provide an easy to use pool for Nekonium miners. This software is functional however an optimised release of the pool is expected soon. Testing and bug submissions are welcome!**
 
 * Support for HTTP and Stratum mining
 * Detailed block stats with luck percentage and full reward
@@ -32,20 +32,20 @@ Dependencies:
 
 **I highly recommend to use Ubuntu 16.04 LTS.**
 
-First install  [go-ethereum](https://github.com/ethereum/go-ethereum/wiki/Installation-Instructions-for-Ubuntu).
+First install  [go-nekonium](https://github.com/ethereum/go-ethereum/wiki/Installation-Instructions-for-Ubuntu).
 
 Clone & compile:
 
     git config --global http.https://gopkg.in.followRedirects true
-    git clone https://github.com/sammy007/open-ethereum-pool.git
-    cd open-ethereum-pool
+    git clone https://github.com/ROZ-MOFUMOFU-ME/open-nekonium-pool.git
+    cd open-nekonium-pool
     make
 
 Install redis-server.
 
 ### Running Pool
 
-    ./build/bin/open-ethereum-pool config.json
+    ./build/bin/open-nekoniium-pool config.json
 
 You can use Ubuntu upstart - check for sample config in <code>upstart.conf</code>.
 
@@ -105,7 +105,7 @@ otherwise you will get errors on start because of JSON comments.**
   // Set to the number of CPU cores of your server
   "threads": 2,
   // Prefix for keys in redis store
-  "coin": "eth",
+  "coin": "nuko",
   // Give unique name to each instance
   "name": "main",
 
@@ -218,12 +218,12 @@ otherwise you will get errors on start because of JSON comments.**
   "upstream": [
     {
       "name": "main",
-      "url": "http://127.0.0.1:8545",
+      "url": "http://127.0.0.1:8293",
       "timeout": "10s"
     },
     {
       "name": "backup",
-      "url": "http://127.0.0.2:8545",
+      "url": "http://127.0.0.2:8293",
       "timeout": "10s"
     }
   ],
@@ -241,7 +241,7 @@ otherwise you will get errors on start because of JSON comments.**
   "unlocker": {
     "enabled": false,
     // Pool fee percentage
-    "poolFee": 1.0,
+    "poolFee": 0.5,
     // Pool fees beneficiary address (leave it blank to disable fee withdrawals)
     "poolFeeAddress": "",
     // Donate 10% from pool fees to developers
@@ -255,7 +255,7 @@ otherwise you will get errors on start because of JSON comments.**
     // Run unlocker in this interval
     "interval": "10m",
     // Geth instance node rpc endpoint for unlocking blocks
-    "daemon": "http://127.0.0.1:8545",
+    "daemon": "http://127.0.0.1:8293",
     // Rise error if can't reach geth in this amount of time
     "timeout": "10s"
   },
@@ -264,11 +264,11 @@ otherwise you will get errors on start because of JSON comments.**
   "payouts": {
     "enabled": false,
     // Require minimum number of peers on node
-    "requirePeers": 25,
+    "requirePeers": 5,
     // Run payouts in this interval
     "interval": "12h",
     // Geth instance node rpc endpoint for payouts processing
-    "daemon": "http://127.0.0.1:8545",
+    "daemon": "http://127.0.0.1:8293",
     // Rise error if can't reach geth in this amount of time
     "timeout": "10s",
     // Address with pool balance
@@ -317,7 +317,7 @@ Made by sammy007. Licensed under GPLv3.
 
 ### Donations
 
-ETH/ETC: 0xb85150eb365e7df0941f0cf08235f987ba91506a
+NUKO: 0xA79BdE46faab3c40632604728E9F2165b052581C
 
 ![](https://cdn.pbrd.co/images/GP5tI1D.png)
 

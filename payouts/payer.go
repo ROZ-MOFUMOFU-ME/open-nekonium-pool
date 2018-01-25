@@ -8,11 +8,11 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common/hexutil"
+	"github.com/nekonium/go-nekonium/common/hexutil"
 
-	"github.com/sammy007/open-ethereum-pool/rpc"
-	"github.com/sammy007/open-ethereum-pool/storage"
-	"github.com/sammy007/open-ethereum-pool/util"
+	"github.com/ROZ-MOFUMOFU-ME/open-nekonium-pool/rpc"
+	"github.com/ROZ-MOFUMOFU-ME/open-nekonium-pool/storage"
+	"github.com/ROZ-MOFUMOFU-ME/open-nekonium-pool/util"
 )
 
 const txCheckInterval = 5 * time.Second

@@ -32,7 +32,7 @@ Dependencies:
 
 **I highly recommend to use Ubuntu 16.04 LTS.**
 
-First install  [go-nekonium](https://github.com/ethereum/go-ethereum/wiki/Installation-Instructions-for-Ubuntu).
+First install  [go-nekonium](https://github.com/nekonium/go-nekonium).
 
 Clone & compile:
 
@@ -45,7 +45,7 @@ Install redis-server.
 
 ### Running Pool
 
-    ./build/bin/open-nekoniium-pool config.json
+    ./build/bin/open-nekonium-pool config.json
 
 You can use Ubuntu upstart - check for sample config in <code>upstart.conf</code>.
 

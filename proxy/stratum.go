@@ -36,19 +36,17 @@ func (s *ProxyServer) ListenTCP() {
 	if err != nil {
 		log.Fatalf("Error: %v", err)
 	}
-	conn, err := server.Accept()
+	defer server.Close()
 
 	log.Printf("Stratum listening on %s", s.config.Proxy.Stratum.Listen)
 	var accept = make(chan int, s.config.Proxy.Stratum.MaxConn)
 	n := 0
 
 	for {
-		conn, err := server.AcceptTCP()
+		conn, err := server.Accept()
 		if err != nil {
 			continue
 		}
-		conn.SetKeepAlive(true)
-
 		ip, _, _ := net.SplitHostPort(conn.RemoteAddr().String())
 
 		if s.policy.IsBanned(ip) || !s.policy.ApplyLimitPolicy(ip) {

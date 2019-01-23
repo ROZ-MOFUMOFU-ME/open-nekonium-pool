@@ -6,11 +6,13 @@
 
 ### Features
 
-**This pool is being further developed to provide an easy to use pool for Nekonium miners. This software is functional however an optimised release of the pool is expected soon. Testing and bug submissions are welcome!**
+**This pool is no longer supported, expect only casual fixes.**
+
+ **Parity-nekonium client is MANDATORY. Gnekonium is no longer supported.**
 
 * Support for HTTP and Stratum mining
 * Detailed block stats with luck percentage and full reward
-* Failover gnekonium instances: gnekonium high availability built in
+* Parity-nekonium nodes rpc failover built in
 * Modern beautiful Ember.js frontend
 * Separate stats for workers: can highlight timed-out workers so miners can perform maintenance of rigs
 * JSON-API for stats
@@ -25,18 +27,17 @@
 Dependencies:
 
   * go >= 1.9
-  * gnekonium or parity-nekonium
+  * parity-nekonium (will not work with gnekonium)
   * redis-server >= 2.8.0
   * nodejs >= 4 LTS
   * nginx
 
 **I highly recommend to use Ubuntu 16.04 LTS.**
 
-First install  [go-nekonium](https://github.com/nekonium/go-nekonium).
+First install  [parity-nekonium](https://github.com/mike-theminer/parity-nekonium).
 
 Clone & compile:
 
-    git config --global http.https://gopkg.in.followRedirects true
     git clone https://github.com/ROZ-MOFUMOFU-ME/open-nekonium-pool.git
     cd open-nekonium-pool
     make
@@ -131,10 +132,13 @@ otherwise you will get errors on start because of JSON comments.**
       // Bind stratum mining socket to this IP:PORT
       "listen": "0.0.0.0:8008",
       "timeout": "120s",
-      "maxConn": 8192
+      "maxConn": 8192,
+      "tls": false,
+      "certFile": "/path/to/cert.pem",
+      "keyFile": "/path/to/key.pem"
     },
 
-    // Try to get new job from gnekonium in this interval
+    // Try to get new job from node in this interval
     "blockRefreshInterval": "120ms",
     "stateUpdateInterval": "3s",
     // Require this share difficulty from miners
@@ -211,7 +215,7 @@ otherwise you will get errors on start because of JSON comments.**
   // Check health of each gnekonium node in this interval
   "upstreamCheckInterval": "5s",
 
-  /* List of gnekonium nodes to poll for new jobs. Pool will try to get work from
+  /* List of parity-nekonium nodes to poll for new jobs. Pool will try to get work from
     first alive one and check in background for failed to back up.
     Current block template of the pool is always cached in RAM indeed.
   */
@@ -254,9 +258,9 @@ otherwise you will get errors on start because of JSON comments.**
     "keepTxFees": false,
     // Run unlocker in this interval
     "interval": "10m",
-    // Gnekonium instance node rpc endpoint for unlocking blocks
+    // Parity-nekonium instance node rpc endpoint for unlocking blocks
     "daemon": "http://127.0.0.1:8293",
-    // Rise error if can't reach gnekonium in this amount of time
+    // Rise error if can't reach parity-nekonium
     "timeout": "10s"
   },
 
@@ -267,13 +271,13 @@ otherwise you will get errors on start because of JSON comments.**
     "requirePeers": 5,
     // Run payouts in this interval
     "interval": "120m",
-    // Gnekonium instance node rpc endpoint for payouts processing
+    // Parity-nekonium node rpc endpoint for payouts processing
     "daemon": "http://127.0.0.1:8293",
-    // Rise error if can't reach gnekonium in this amount of time
+    // Rise error if can't reach parity-nekonium
     "timeout": "10s",
     // Address with pool balance
     "address": "0x0",
-    // Let gnekonium to determine gas and gasPrice
+    // Let parity-nekonium to determine gas and gasPrice
     "autoGas": true,
     // Gas amount and price for payout tx (advanced users only)
     "gas": "21000",
@@ -302,10 +306,6 @@ I recommend this deployment strategy:
 * You must restart module if you see errors with the word *suspended*.
 * Don't run payouts and unlocker modules as part of mining node. Create separate configs for both, launch independently and make sure you have a single instance of each module running.
 * If `poolFeeAddress` is not specified all pool profit will remain on coinbase address. If it specified, make sure to periodically send some dust back required for payments.
-
-### Alternative Nekonium Implementations
-
-This pool is tested to work with [parity-nekonium](https://github.com/nekonium/parity-nekonium). Mining and block unlocking works, but I am not sure about payouts and suggest to run *official* gnekonium node for payments.
 
 ### Credits
 

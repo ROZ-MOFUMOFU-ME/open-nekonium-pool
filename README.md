@@ -34,11 +34,10 @@ Dependencies:
 
 **I highly recommend to use Ubuntu 16.04 LTS.**
 
-First install  [go-nekonium](https://github.com/nekonium/go-nekonium).
+First install  [parity-nekonium](https://github.com/mike-theminer/parity-nekonium).
 
 Clone & compile:
 
-    git config --global http.https://gopkg.in.followRedirects true
     git clone https://github.com/ROZ-MOFUMOFU-ME/open-nekonium-pool.git
     cd open-nekonium-pool
     make

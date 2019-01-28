@@ -281,7 +281,7 @@ otherwise you will get errors on start because of JSON comments.**
     "autoGas": true,
     // Gas amount and price for payout tx (advanced users only)
     "gas": "21000",
-    "gasPrice": "30000000000",
+    "gasPrice": "20000000000",
     // Send payment only if miner's balance is >= 0.5 NUKO
     "threshold": 500000000,
     // Perform BGSAVE on Redis after successful payouts session

@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/nekonium/go-nekonium/common"
-	"github.com/nekonium/go-nekonium/common/math"
+	"github.com/ethereum/go-ethereum/common"
+	"github.com/ethereum/go-ethereum/common/math"
 )
 
 var Ether = math.BigPow(10, 18)

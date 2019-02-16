@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/nekonium/go-nekonium/common/math"
+	"github.com/ROZ-MOFUMOFU-ME/go-nekonium/common/math"
 
 	"github.com/ROZ-MOFUMOFU-ME/open-nekonium-pool/rpc"
 	"github.com/ROZ-MOFUMOFU-ME/open-nekonium-pool/storage"

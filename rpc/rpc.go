@@ -12,7 +12,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/nekonium/go-nekonium/common"
+	"github.com/ROZ-MOFUMOFU-ME/go-nekonium/common"
 
 	"github.com/ROZ-MOFUMOFU-ME/open-nekonium-pool/util"
 )

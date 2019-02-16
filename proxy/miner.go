@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ethereum/ethash"
+	"github.com/ROZ-MOFUMOFU-ME/nukohash"
 	"github.com/nekonium/go-nekonium/common"
 )
 

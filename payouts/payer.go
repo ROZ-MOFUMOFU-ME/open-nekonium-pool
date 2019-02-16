@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/ROZ-MOFUMOFU-ME/go-nekonium/common/hexutil"
+	"github.com/nekonium/go-nekonium/common/hexutil"
 
 	"github.com/ROZ-MOFUMOFU-ME/open-nekonium-pool/rpc"
 	"github.com/ROZ-MOFUMOFU-ME/open-nekonium-pool/storage"

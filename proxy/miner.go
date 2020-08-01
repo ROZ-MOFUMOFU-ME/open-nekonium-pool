@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/ROZ-MOFUMOFU-ME/nukohash"
-	"github.com/nekonium/go-nekonium/common"
+	"github.com/ROZ-MOFUMOFU-ME/go-nekonium/common"
 )
 
 var hasher = ethash.New()

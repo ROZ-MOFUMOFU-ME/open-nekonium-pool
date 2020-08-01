@@ -1,8 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\util"
+    "\\www\\app",
+    "\\www\\app\\components",
+    "\\www\\app\\controllers",
+    "\\www\\app\\models",
+    "\\www\\app\\routes",
+    "\\www\\app\\styles",
+    "\\www\\app\\templates",
+    "\\www\\app\\templates\\account",
+    "\\www\\app\\templates\\blocks"
   ],
-  "SelectedNode": "\\util\\util.go",
+  "SelectedNode": "\\proxy\\miner.go",
   "PreviewInSolutionExplorer": false
 }
